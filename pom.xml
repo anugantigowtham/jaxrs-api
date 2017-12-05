@@ -1,0 +1,130 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>jersey-rest</groupId>
+	<artifactId>jersey-jaxrs</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>jersey-jaxrs Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<!-- <dependencies> -->
+	<!-- <dependency> -->
+	<!-- <groupId>junit</groupId> -->
+	<!-- <artifactId>junit</artifactId> -->
+	<!-- <version>3.8.1</version> -->
+	<!-- <scope>test</scope> -->
+	<!-- </dependency> -->
+	<!-- <dependency> -->
+	<!-- <groupId>org.glassfish.jersey.containers</groupId> -->
+	<!-- <artifactId>jersey-container-grizzly2-http</artifactId> -->
+	<!-- <version>2.26-b03</version> -->
+	<!-- </dependency> -->
+
+	<!-- <dependency> -->
+	<!-- <groupId>org.glassfish.jersey.containers</groupId> -->
+	<!-- <artifactId>jersey-container-grizzly2-servlet</artifactId> -->
+	<!-- <version>2.26-b03</version> -->
+	<!-- </dependency> -->
+
+	<!-- <dependency> -->
+	<!-- <groupId>org.glassfish.jersey.containers</groupId> -->
+	<!-- <artifactId>jersey-container-jdk-http</artifactId> -->
+	<!-- <version>2.26-b03</version> -->
+	<!-- </dependency> -->
+
+	<!-- <dependency> -->
+	<!-- <groupId>org.glassfish.jersey.containers</groupId> -->
+	<!-- <artifactId>jersey-container-simple-http</artifactId> -->
+	<!-- <version>2.26-b03</version> -->
+	<!-- </dependency> -->
+
+	<!-- <dependency> -->
+	<!-- <groupId>org.glassfish.jersey.containers</groupId> -->
+	<!-- <artifactId>jersey-container-jetty-http</artifactId> -->
+	<!-- <version>2.26-b03</version> -->
+	<!-- </dependency> -->
+
+	<!-- <dependency> -->
+	<!-- <groupId>org.glassfish.jersey.containers</groupId> -->
+	<!-- <artifactId>jersey-container-jetty-servlet</artifactId> -->
+	<!-- <version>2.26-b03</version> -->
+	<!-- </dependency> -->
+	<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations -->
+	<!-- <dependency> -->
+	<!-- <groupId>com.fasterxml.jackson.core</groupId> -->
+	<!-- <artifactId>jackson-annotations</artifactId> -->
+	<!-- <version>2.9.0</version> -->
+	<!-- </dependency> -->
+	<!-- <dependency> -->
+	<!-- <groupId>com.fasterxml.jackson.core</groupId> -->
+	<!-- <artifactId>jackson-databind</artifactId> -->
+	<!-- <version>2.9.0</version> -->
+	<!-- </dependency> -->
+	<!-- <dependency> -->
+	<!-- <groupId>com.fasterxml.jackson.core</groupId> -->
+	<!-- <artifactId>jackson-core</artifactId> -->
+	<!-- <version>2.9.0</version> -->
+	<!-- </dependency> -->
+
+
+	<!-- </dependencies> -->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.glassfish.jersey</groupId>
+				<artifactId>jersey-bom</artifactId>
+				<version>${jersey.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.glassfish.jersey.containers</groupId>
+			<artifactId>jersey-container-grizzly2-http</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.containers</groupId>
+			<artifactId>jersey-container-grizzly2-servlet</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.inject</groupId>
+			<artifactId>jersey-hk2</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-json-jackson</artifactId>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.2.12</version>
+		</dependency>
+
+		<!-- uncomment this to get JSON support: <dependency> <groupId>org.glassfish.jersey.media</groupId> 
+			<artifactId>jersey-media-json-binding</artifactId> </dependency> -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.9</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongo-java-driver</artifactId>
+			<version>3.4.3</version>
+		</dependency>
+
+	</dependencies>
+	<properties>
+		<jersey.version>2.26</jersey.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<build>
+		<finalName>jersey-jaxrs</finalName>
+	</build>
+</project>
